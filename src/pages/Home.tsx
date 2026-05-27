@@ -1,10 +1,9 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface DocumentLink {
   title: string;
   url: string;
-  type: 'pdf' | 'slides' | 'spreadsheet';
+  type: 'pdf' | 'slides' | 'spreadsheet' | 'doc';
   description: string;
   color: string;
   accentBg: string;

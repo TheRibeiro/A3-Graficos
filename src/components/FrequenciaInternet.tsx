@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip,
   BarChart, Bar, XAxis, YAxis, LabelList
@@ -29,7 +29,7 @@ const dataRegiao = [
 
 const renderCustomizedLabel = (props: any) => {
   const { x, y, width, height, value } = props;
-  const radius = 10;
+
 
 
   const textX = width < 30 ? x + width + 10 : x + width - 10;
@@ -76,14 +76,14 @@ function Donut({ data, labels }: { data: number[]; labels: string[] }) {
             dataKey="value"
             stroke="none"
           >
-            {chartData.map((entry, index) => (
+            {chartData.map((_, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}
                 style={{ filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.3))' }}
               />
             ))}
           </Pie>
           <RechartsTooltip
-            formatter={(value: number, name: string) => [`${value}%`, name]}
+            formatter={(value: any, name: any) => [`${value}%`, name]}
             contentStyle={{ backgroundColor: 'rgba(16,16,28,0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', backdropFilter: 'blur(10px)' }}
             itemStyle={{ color: '#fff', fontWeight: 'bold' }}
           />
@@ -152,7 +152,7 @@ function HBarChart({ items, labels }: { items: { grupo: string; emoji?: string; 
             />
             <RechartsTooltip
               cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-              formatter={(value: number) => [`${value}%`, labels[activeFreq]]}
+              formatter={(value: any) => [`${value}%`, labels[activeFreq]]}
               contentStyle={{ backgroundColor: 'rgba(16,16,28,0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', backdropFilter: 'blur(10px)' }}
               itemStyle={{ color: '#fff', fontWeight: 'bold' }}
             />

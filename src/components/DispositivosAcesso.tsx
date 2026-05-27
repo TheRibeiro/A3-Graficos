@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer
@@ -113,7 +113,7 @@ export default function DispositivosAcesso() {
               />
               <RechartsTooltip
                 cursor={{ fill: 'rgba(255,255,255,0.05)' }}
-                formatter={(value: number, name: string) => [`${value}%`, name]}
+                formatter={(value: any, name: any) => [`${value}%`, name]}
                 contentStyle={{ backgroundColor: 'rgba(16,16,28,0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', backdropFilter: 'blur(10px)' }}
                 itemStyle={{ color: '#fff', fontWeight: 'bold' }}
               />
