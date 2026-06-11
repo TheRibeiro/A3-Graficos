@@ -242,7 +242,7 @@ export default function FrequenciaInternet() {
 
       <div className="card fade-up" style={{ padding: 32, animationDelay: '0.3s', background: 'rgba(16,16,28,0.85)', borderRadius: 20, border: '1px solid rgba(255,255,255,0.06)', boxShadow: '0 20px 60px -12px rgba(0,0,0,0.5)', overflow: 'hidden' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-          <h2 style={{ fontSize: 16, fontWeight: 700, color: '#fff' }}>Distribuição Detalhada</h2>
+          <h2 style={{ fontSize: 16, fontWeight: 700, color: '#fff' }}></h2>
           <span style={{ fontSize: 10, fontWeight: 600, color: '#a78bfa', background: 'rgba(167,139,250,0.12)', padding: '3px 10px', borderRadius: 6, textTransform: 'uppercase', letterSpacing: '0.5px', border: '1px solid rgba(167,139,250,0.2)' }}>Gráfico de Rosca</span>
         </div>
         <p style={{ fontSize: 12, color: '#8b8b9e', marginBottom: 24 }}>Selecione um grupo demográfico para ver a divisão exata</p>

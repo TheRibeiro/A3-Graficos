@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import FrequenciaInternet from './components/FrequenciaInternet';
 import DispositivosAcesso from './components/DispositivosAcesso';
+import Hipoteses from './components/Hipoteses';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/frequencia" element={<FrequenciaInternet />} />
           <Route path="/dispositivos" element={<DispositivosAcesso />} />
+          <Route path="/hipoteses" element={<Hipoteses />} />
         </Routes>
       </div>
     </div>

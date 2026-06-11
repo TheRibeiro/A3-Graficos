@@ -139,11 +139,11 @@ export default function Home() {
       </div>
 
       {/* Main Graphics Sections */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24, width: '100%', marginBottom: 56 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24, width: '100%', marginBottom: 56 }}>
 
         {/* Card 1: Frequência */}
-        <div
-          className="card fade-up"
+        <div 
+          className="card fade-up" 
           onClick={() => navigate('/frequencia')}
           style={{
             padding: '36px 32px',
@@ -197,8 +197,8 @@ export default function Home() {
         </div>
 
         {/* Card 2: Dispositivos */}
-        <div
-          className="card fade-up"
+        <div 
+          className="card fade-up" 
           onClick={() => navigate('/dispositivos')}
           style={{
             padding: '36px 32px',
@@ -251,6 +251,60 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Card 3: Hipóteses */}
+        <div 
+          className="card fade-up" 
+          onClick={() => navigate('/hipoteses')}
+          style={{
+            padding: '36px 32px',
+            cursor: 'pointer',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            height: '100%',
+            animationDelay: '0.3s'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-5px)';
+            e.currentTarget.style.boxShadow = '0 25px 65px -12px rgba(0,0,0,0.6), 0 0 100px -20px rgba(244,63,94,0.15)';
+            e.currentTarget.style.borderColor = 'rgba(244,63,94,0.2)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 20px 60px -12px rgba(0,0,0,0.5), 0 0 80px -20px rgba(99,102,241,0.08)';
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)';
+          }}
+        >
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+              <div style={{
+                background: 'rgba(244,63,94,0.08)',
+                border: '1px solid rgba(244,63,94,0.15)',
+                padding: 10,
+                borderRadius: 12,
+                color: '#f43f5e',
+                display: 'inline-flex'
+              }}>
+                <svg style={{ width: 22, height: 22 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                </svg>
+              </div>
+              <span style={{ fontSize: 10, fontWeight: 700, color: '#fb7185', background: 'rgba(244,63,94,0.08)', border: '1px solid rgba(244,63,94,0.15)', padding: '2px 8px', borderRadius: 4, textTransform: 'uppercase' }}>Análise</span>
+            </div>
+            <h2 style={{ fontSize: 20, fontWeight: 800, color: '#fff', marginBottom: 8, letterSpacing: '-0.5px' }}>Análise de Hipóteses</h2>
+            <p style={{ fontSize: 13, color: '#8b8b9e', lineHeight: 1.6, marginBottom: 16 }}>
+              Validação das hipóteses sobre o impacto do uso da internet (Saúde Mental, Foco, Cyberbullying).
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 700, color: '#fb7185', marginTop: 12 }}>
+            Visualizar gráficos
+            <svg style={{ width: 14, height: 14 }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Structured Read-Only Documents Section */}
