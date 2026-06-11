@@ -1,7 +1,6 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer, Cell, LabelList
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer, LabelList
 } from 'recharts';
 
 const dataHipoteses = [
@@ -141,7 +140,7 @@ export default function Hipoteses() {
                 formatter={(value) => <span style={{ color: '#fff' }}>{value}</span>}
               />
               <Bar dataKey="Confirmado" name="Evidência" fill="#f43f5e" animationDuration={1000} radius={[0, 8, 8, 0]}>
-                <LabelList dataKey="Confirmado" position="right" formatter={(val: number) => `${val}%`} fill="#a0a0b8" fontSize={12} fontWeight="bold" />
+                <LabelList dataKey="Confirmado" position="right" formatter={(val: any) => `${val}%`} fill="#a0a0b8" fontSize={12} fontWeight="bold" />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
